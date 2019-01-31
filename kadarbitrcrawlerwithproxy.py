@@ -82,11 +82,11 @@ def requests_control(session, case, url, head, req_type, data=None):
     while True:
         try:
             try:
-                response=session.get(url, headers=head, data=data, proxies=PROXY, timeout=10)
+                response=session.get(url, headers=head, data=data, proxies=PROXY, timeout=5)
                 while (response.status_code != 200) or (req_type == 1 and response.status_code == 403) or (req_type == 2 and case not in response.text) or (req_type == 3 and response.status_code == 200 and 'json' not in response.headers['Content-Type']):
                     PROXY=next(PROXIES_GEN)
                     log('DEAD PROXY')
-                    response=session.get(url, headers=head, data=data, proxies=PROXY, timeout=10)
+                    response=session.get(url, headers=head, data=data, proxies=PROXY, timeout=5)
                     break
                 break
             except Exception as e:

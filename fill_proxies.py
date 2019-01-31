@@ -15,7 +15,7 @@ kad_head={
 def check_proxy(proxies_for_check, valid_proxies):
     for prx in proxies_for_check:
         try:
-            requests.get('http://kad.arbitr.ru', headers=kad_head, proxies={'http':prx}, timeout=10)
+            requests.get('http://kad.arbitr.ru', headers=kad_head, proxies={'http':prx}, timeout=3.51)
             valid_proxies.append(prx)
         except:
             pass

@@ -17,7 +17,7 @@ async def save(proxies, filename):
 
 def get_proxies(work_dir, n):
     proxies = asyncio.Queue()
-    broker = Broker(proxies, timeout=10)
+    broker = Broker(proxies, timeout=6)
     tasks = asyncio.gather(broker.find(types=['HTTP', 'HTTPS'], limit=n,countries=['RU','UA']),
                            save(proxies, filename=work_dir+'/proxies.txt'))
     loop = asyncio.get_event_loop()
