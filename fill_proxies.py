@@ -41,7 +41,7 @@ def check_proxies(proxies_list):
 if __name__ == '__main__':
     WORK_DIR='/home/parser/'
     
-    pl = get_proxies(WORK_DIR, 100)
+    pl = get_proxies(WORK_DIR, 300)
 
     pl=check_proxies(pl)
     
