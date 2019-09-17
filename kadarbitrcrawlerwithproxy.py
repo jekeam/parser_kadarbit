@@ -270,7 +270,7 @@ def parse_file(file_name, file_receiver):
 
 #%%        
 CRAWLER_EMAIL='kadarbitrcrawler@gmail.com'
-CRAWLER_PASSWORD='AAaa123456789'
+CRAWLER_PASSWORD='XXX'
 WORK_DIR='/home/parser/'
 #%%
 if __name__ == '__main__':
